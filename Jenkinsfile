@@ -4,16 +4,16 @@ pipeline {
     stages {
         stage('Compile') {
             steps { 
-                echo 'compile'
+                sh 'mvn compile'
             }
         }
         stage('Test') {
             steps { 
-                 echo 'test'
+                 sh 'mvn test'
             }
         }
         stage('Package') {
             steps { 
-                 echo 'package'
+                 sh 'mvn package'
             }
         }
